@@ -70,3 +70,33 @@ shadcn/ui: Complete component library (buttons, cards, forms, dialogs)
 Radix UI: Accessible primitives for complex interactions
 Tailwind CSS: Utility-first styling with custom color scheme
 Lucide React: Consistent icon system
+⚙️ Configuration Files
+Package Dependencies (package.json)
+{
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build": "vite build && esbuild bundle",
+    "db:push": "drizzle-kit push"
+  },
+  "dependencies": {
+    "react", "express", "drizzle-orm", "openai", 
+    "@tanstack/react-query", "@radix-ui/*", "wouter"
+  }
+}
+Database Configuration (drizzle.config.ts)
+// Drizzle Kit configuration for PostgreSQL
+// Schema path and migration settings
+TypeScript Configuration (tsconfig.json)
+// Path aliases for clean imports (@/, @shared/)
+// React JSX configuration
+// Strict type checking enabled
+   🔐 Authentication System
+Replit Auth Integration (server/replitAuth.ts)
+// OpenID Connect with Replit provider
+// Session management with PostgreSQL store
+// User profile synchronization
+// Automatic token refresh
+Auth Hooks (client/src/hooks/useAuth.ts)
+// React Query powered authentication state
+// User data fetching and caching
+// Loading and error states
