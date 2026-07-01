@@ -1,0 +1,72 @@
+ 
+      Here are all the main code files for your StressSense academic stress management application:
+
+   🗄 Database Schema (shared/schema.ts)
+// Complete database schema with tables for users, journal entries, chat messages, coping sessions
+// Includes Drizzle ORM setup, relations, and type definitions
+// Key tables: users, journalEntries, chatMessages, copingSessions, sessions
+   🛠 Backend Core
+Main Server (server/index.ts)
+// Express.js server setup with logging middleware
+// Port 5000 configuration for Replit deployment
+// Vite integration for development
+API Routes (server/routes.ts)
+// Complete REST API with 11 endpoints:
+// - Auth: /api/auth/user
+// - Journal: POST/GET /api/journal
+// - Chat: POST/GET /api/chat  
+// - Coping: POST/PUT /api/coping-sessions
+// - Analytics: /api/analytics/stats, /api/analytics/mood-trends, /api/analytics/insights
+Database Layer (server/storage.ts)
+// DatabaseStorage class implementing full CRUD operations
+// User management, journal entries, chat messages, coping sessions
+// Analytics queries for mood trends and user statistics
+Database Connection (server/db.ts)
+// Neon PostgreSQL connection with Drizzle ORM
+// WebSocket configuration for serverless database
+   🤖 AI Services
+OpenAI Integration (server/services/openai.ts)
+// GPT-4o powered chatbot responses with context awareness
+// AI-generated insights from journal entries
+// JSON-formatted responses with error handling
+Sentiment Analysis (server/services/sentiment.ts)
+// Custom keyword-based sentiment analysis
+// Positive/negative/neutral classification wit  h confidence scores
+// Academic stress keyword detection
+   🎨 Frontend Core
+Main App (client/src/App.tsx)
+// React Router setup with Wouter
+// Authentication-based routing (Landing vs Home)
+// Query client and toast provider setup
+Home Dashboard (client/src/pages/home.tsx)
+// Main dashboard with personalized greeting
+// Stats cards, mood chart, AI insights
+// Quick action buttons for all features
+Journal Page (client/src/pages/journal.tsx)
+// Daily mood journal with interactive mood selector
+// Form validation with Zod schemas
+// Sentiment analysis display with color-coded badges
+// Previous entries list with metrics
+   📱 Key Components
+Sidebar Navigation (client/src/components/layout/sidebar.tsx)
+// Responsive sidebar with user profile
+// Navigation to all app sections
+// User avatar and logout functionality
+Mobile Header (client/src/components/layout/mobile-header.tsx)
+// Mobile-responsive header with hamburger menu
+// Brand logo and navigation toggle
+Dashboard Components
+Stats Cards: Key metrics display (mood, stress, sleep, study hours)
+Mood Chart: 7-day trend visualization with Recharts
+AI Insights: Personalized recommendations from OpenAI
+   🎨 Styling & UI
+CSS Styles (client/src/index.css)
+/* Custom CSS variables for StressSense color palette */
+/* Soft, calming colors: blues, greens, warm accents */
+/* Gradient utilities and animations */
+/* Dark mode support */
+UI Components
+shadcn/ui: Complete component library (buttons, cards, forms, dialogs)
+Radix UI: Accessible primitives for complex interactions
+Tailwind CSS: Utility-first styling with custom color scheme
+Lucide React: Consistent icon system
